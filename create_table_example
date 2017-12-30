@@ -1,0 +1,19 @@
+create table inventory (id integer primary key, brand text, price integer, quantity integer, aisle integer, country text);
+
+insert into inventory values (1, 'ABC', 20, 10, 1, 'USA');
+insert into inventory values (2, 'test', 20, 1, 2, 'China');
+insert into inventory values (3, 'something',10, 2, 3, 'China');
+insert into inventory values (4, 'ok', 2, 44, 3, 'Italy');
+insert into inventory values (5, 'google', 3, 22, 4, 'Mexico');
+insert into inventory values (6, 'USA', 3, 44, 2, 'Japan');
+insert into inventory values (7, 'sso', 4, 23, 4, 'China');
+insert into inventory values (8, 'sourj', 4, 22, 2, 'Korea');
+insert into inventory values (9, 'oulsj', 5, 322, 2, 'USA');
+insert into inventory values (10, 'time machine', 49, 33, 2, 'USA');
+insert into inventory values (11, 'big tree', 33, 22, 9, 'UK');
+insert into inventory values (12, 'oreily', 3, 222, 3, 'Japan');
+insert into inventory values (13, 'goodyear', 4, 232, 3, 'Korea');
+insert into inventory values (14, 'such a good thing', 4, 3, 2, 'USA');
+insert into inventory values (15, 'Oh my ...', 3, 32, 3, 'USA');
+
+select brand, price, country from inventory group by country order by price;
